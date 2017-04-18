@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="intl-tel-input-master/build/css/intlTelInput.css">
+</head>
+<body>
+	<form action="#"><input type="tel" id="phone"></form>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="intl-tel-input-master/build/js/intlTelInput.min.js"></script>
+	<script>
+		$("#phone").intlTelInput({
+			customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+				return "e.g. " + selectedCountryPlaceholder;
+			}
+
+			
+		});
+	</script>
+</body>
+</html>
